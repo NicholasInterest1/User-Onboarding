@@ -35,11 +35,11 @@ const PatsRoster = ({ errors, touched, values, status }) => {
         </Field>
 
         <label className="checkbox-container">
-          Vaccinations
+          terms of Service
           <Field
             type="checkbox"
-            name="vaccinations"
-            checked={values.vaccinations}
+            name="terms of Service"
+            checked={values.termsofservice}
           />
           <span className="checkmark" />
         </label>
@@ -69,9 +69,9 @@ const PatsRoster = ({ errors, touched, values, status }) => {
 };
 
 const FormikPatsRoster = withFormik({
-  mapPropsToValues({ playername, JerseyNumber, playerNotes, name, vaccinations }) {
+  mapPropsToValues({ playername, JerseyNumber, playerNotes, name, termsofservice }) {
     return {
-      vaccinations: vaccinations || false,
+      termsofservice: termsofservice || false,
       name: name || "",
       playername: playername || "",
       JerseyNumber: JerseyNumber || "{number}",
